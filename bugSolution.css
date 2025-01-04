@@ -1,0 +1,20 @@
+/* Solution: Ensure proper order of operations and account for potential layout conflicts.  Use parentheses liberally to clarify the calculation, and consider the impact of other layout properties. */
+
+.container {
+  width: 100%;
+}
+
+.element {
+  /* Correct use of parentheses for clearer order of operations */
+  width: calc(100% - (20px + 10px));  
+  /*Consider adding box-sizing: border-box; if padding and border affects the layout*/
+  box-sizing: border-box;
+  background-color: lightblue;
+  padding:10px;
+}
+
+/*Adding explicit units for all values can prevent unexpected behaviour*/
+.element2 {
+  width: calc(100% - 30px);
+  background-color: lightgreen;
+}
